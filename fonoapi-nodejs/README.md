@@ -4,7 +4,6 @@
 [![Twitter](https://img.shields.io/twitter/url/https/github.com/mtrung/fonoapi/.svg?style=social)](https://twitter.com/intent/tweet?text=fonoApi - Mobile Device Description Api (https://github.com/mtrung/fonoapi/) so cool check it out)
 
 # FonoApi for Node.js
-https://github.com/mtrung/fonoapi
 
 ------
 ###### Node.js demo
@@ -12,14 +11,21 @@ https://github.com/mtrung/fonoapi
 var fonoapi = require('./fonoapi.node.js');
 fonoapi.token = 'your_token';
 
-// get devices
+// get devices w/ brand
 fonoapi.getDevices(myCallback, 'iphone', 'apple');
+// get devices w/o brand
+fonoapi.getDevices(myCallback, 'iphone 6S');
 
 // get latest devices from apple (limit result to 5)
 fonoapi.getLatest(myCallback, 5, 'apple');
+
+function myCallback(queryString, data) {
+    console.log(data.Brand + " " + data.DeviceName);
+    ...
+}
 ```
 
-###### Result Array Description
+###### Data Object Description
 
 **Note** : Use a "_" before key if the key is starting with a number (example : _2g_bands, _4g_bands)
 
@@ -40,7 +46,7 @@ fonoapi.getLatest(myCallback, 5, 'apple');
 - card_slot
 - phonebook
 - call_records
-- camera_c (camera availablity)
+- camera_c (camera availability)
 - alert_types
 - loudspeaker_
 - 3_5mm_jack_
@@ -58,7 +64,7 @@ fonoapi.getLatest(myCallback, 5, 'apple');
 - games
 - languages
 - java
-- features_c (additional features sperated by "-")
+- features_c (additional features separated by "-")
 - battery_c (battery information)
 - stand_by (standby time)
 - talk_time (standby time)
@@ -67,7 +73,7 @@ fonoapi.getLatest(myCallback, 5, 'apple');
 - cpu
 - internal (memory + RAM)
 - os
-- body_c (body features seperated by "-")
+- body_c (body features separated by "-")
 - keyboard
 - primary_ (primary camera)
 - video
@@ -76,7 +82,7 @@ fonoapi.getLatest(myCallback, 5, 'apple');
 - speed
 - network_c
 - chipset
-- features  (additional features seperated by "-")
+- features  (additional features separated by "-")
 - music_play
 - protection
 - gpu
