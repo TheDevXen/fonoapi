@@ -1,0 +1,17 @@
+{
+  "name": "fonoapi-nodejs",
+  "version": "0.1.0",
+  "description": "Fonoapi for Node.js",
+  "main": "fonoapi.node.js",
+  "scripts": {
+    "test": "xo"
+  },
+  "author": "Trung Vo",
+  "license": "ISC",
+  "dependencies": {
+    "httpreq": "^0.4.22"
+  },
+  "devDependencies": {
+    "xo": "^0.15.0"
+  }
+}
