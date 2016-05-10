@@ -15,10 +15,10 @@ Api Url : https://fonoapi.freshpixl.com/v1/
 
 ###### Method : getdevice (https://fonoapi.freshpixl.com/v1/getdevice)
 available options
-  - brand - 
+  - brand -
        pass the Mobile Device Brand (example : "samsung", "htc")
-  - device* - 
-       pass nearly relevent mobile device name (example : "i9305", "A8") 
+  - device* -
+       pass nearly relevent mobile device name (example : "i9305", "A8")
        this might result multiple results at a time.
   - position -
        when a set of results is returned you can get a specific device by passing the position of your device on the result set. count starts from 0
@@ -28,9 +28,9 @@ available options
 
 ###### Method : getlatest (https://fonoapi.freshpixl.com/v1/getlatest)
 available options
-  - brand - 
+  - brand -
        It gives the latest you can filter the brand (example : "samsung", "htc")
-  - limit - 
+  - limit -
        limit the result count (Max 100)
   - token* -
     - you will need a token to access the Api. no registration, nothing, just grab the key.
@@ -47,7 +47,7 @@ available options
 
 	$apiKey = "xxxxxxxx"; // get your token key here - https://fonoapi.freshpixl.com
 	$fonoapi = fonoApi::init($apiKey);
-	
+
 		try {
 
 			$res = $fonoapi::getDevice("i9305"); // the device you need to get details here
@@ -69,15 +69,16 @@ available options
 ```
 
 ------
-
+###### Python
 Thanks @jesusperiago
 Python Library is here : https://github.com/jesusperiago/fonoapi
 
-------
+###### jQuery
+jQuery Plugin here: https://github.com/shakee93/fonoapi/tree/master/fonoapi-js
 
-------
-
-jQuery Plugin here : https://github.com/shakee93/fonoapi/tree/master/fonoapi-js
+###### Node.js
+Node.js lib here:
+https://github.com/mtrung/fonoapi/tree/master/fonoapi-nodejs
 
 ------
 
@@ -120,7 +121,7 @@ jQuery Plugin here : https://github.com/shakee93/fonoapi/tree/master/fonoapi-js
 - games
 - languages
 - java
-- features_c (additional features sperated by "-")
+- features_c (additional features separated by "-")
 - battery_c (battery information)
 - stand_by (standby time)
 - talk_time (standby time)
@@ -129,7 +130,7 @@ jQuery Plugin here : https://github.com/shakee93/fonoapi/tree/master/fonoapi-js
 - cpu
 - internal (memory + RAM)
 - os
-- body_c (body features seperated by "-")
+- body_c (body features separated by "-")
 - keyboard
 - primary_ (primary camera)
 - video
@@ -138,7 +139,7 @@ jQuery Plugin here : https://github.com/shakee93/fonoapi/tree/master/fonoapi-js
 - speed
 - network_c
 - chipset
-- features  (additional features seperated by "-")
+- features  (additional features separated by "-")
 - music_play
 - protection
 - gpu
@@ -150,4 +151,3 @@ jQuery Plugin here : https://github.com/shakee93/fonoapi/tree/master/fonoapi-js
 - display
 - battery_life
 - 4g_bands
-
