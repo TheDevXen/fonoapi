@@ -16,6 +16,6 @@ function printHandler(queryString, data) {
 fonoapi.token = 'bb48887db376bf9d8c1b0e20ee347d9a770c811372512c8a';
 fonoapi.printDevices(' galaxy s5');
 fonoapi.printDevices('galaxy s5');
-fonoapi.getDevices(' galaxy s7', printHandler);
+fonoapi.getDevicesWithBrand(' galaxy s7', 'samsung', printHandler);
 
 fonoapi.printLatest();
