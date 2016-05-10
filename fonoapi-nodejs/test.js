@@ -5,7 +5,7 @@ function printHandler(queryString, data) {
 		data.forEach(function (device) {
 			console.log(device.DeviceName);
 		});
-        console.log('');
+        console.log(' ');
 	} else if (data.hasOwnProperty('message')) {
 		console.log(data.message);
 	} else {
@@ -17,3 +17,5 @@ fonoapi.token = 'bb48887db376bf9d8c1b0e20ee347d9a770c811372512c8a';
 fonoapi.printDevices(' galaxy s5');
 fonoapi.printDevices('galaxy s5');
 fonoapi.getDevices(' galaxy s7', printHandler);
+
+fonoapi.printLatest();
