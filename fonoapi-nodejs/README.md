@@ -1,12 +1,14 @@
 [![GitHub stars](https://img.shields.io/github/stars/mtrung/fonoapi.svg)](https://github.com/mtrung/fonoapi/stargazers)
 [![GitHub issues](https://img.shields.io/github/issues/mtrung/fonoapi.svg)](https://github.com/mtrung/fonoapi/issues)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/mtrung/fonoapi/master/LICENSE)
-[![Twitter](https://img.shields.io/twitter/url/https/github.com/mtrung/fonoapi/.svg?style=social)](https://twitter.com/intent/tweet?text=fonoApi - Mobile Device Description Api (https://github.com/mtrung/fonoapi/) so cool check it out)
+[![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
 # FonoApi for Node.js
 
+- Provide mobile device descriptions such as model, brand, cpu, gpu, dimensions, release date, etc...
+
 ------
-###### Node.js demo
+###### Node.js example
 ```
 var fonoapi = require('./fonoapi.node.js');
 fonoapi.token = 'your_token';
