@@ -6,6 +6,11 @@
 - Provide mobile device descriptions such as model, brand, cpu, gpu, dimensions, release date, etc...
 
 ------
+###### Installation
+```
+npm install fonoapi-nodejs --save
+```
+
 ###### Node.js example
 ```
 var fonoapi = require('./fonoapi.node.js');

@@ -1,4 +1,4 @@
-var fonoapi = require('./fonoapi.node.js');
+var fonoapi = require('./index.js');
 fonoapi.token = 'bb48887db376bf9d8c1b0e20ee347d9a770c811372512c8a';
 
 var testModelStrings = [
