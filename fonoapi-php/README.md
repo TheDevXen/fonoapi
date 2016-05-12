@@ -1,31 +1,39 @@
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/mtrung/fonoapi/master/LICENSE)
-[![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
+# FonoApi for PHP
 
-# FonoApi for Node.js
-
-- Provide mobile device descriptions such as model, brand, cpu, gpu, dimensions, release date, etc...
+- Provide mobile device descriptions such as model, brand, cpu, gpu, dimensions, release date etc...
 
 ------
-###### Node.js example
+###### PHP Demo
+
 ```
-var fonoapi = require('./fonoapi.node.js');
-fonoapi.token = 'your_token';
+<?php
 
-// get devices w/ brand
-fonoapi.getDevices(myCallback, 'iphone', 'apple');
-// get devices w/o brand
-fonoapi.getDevices(myCallback, 'iphone 6S');
+	include_once("fonoapi-v1.php");
 
-// get latest devices from apple (limit result to 5)
-fonoapi.getLatest(myCallback, 5, 'apple');
+	$apiKey = "xxxxxxxx"; // get your token key here - https://fonoapi.freshpixl.com
+	$fonoapi = fonoApi::init($apiKey);
 
-function myCallback(queryString, data) {
-    console.log(data.Brand + " " + data.DeviceName);
-    ...
-}
+		try {
+
+			$res = $fonoapi::getDevice("i9305"); // the device you need to get details here
+
+			foreach ($res as $mobile) {
+				if (!empty($mobile->DeviceName)) 	echo "Device : ". $mobile->DeviceName . "<br>";
+				if (!empty($mobile->Brand)) 		echo "Brand : ". $mobile->Brand . "<br>";
+				if (!empty($mobile->cpu)) 			echo "Cpu : " . $mobile->cpu . "<br>";
+				if (!empty($mobile->status)) 		echo "Status : " . $mobile->status . "<br>";
+				if (!empty($mobile->dimensions)) 	echo "Dimensions : " . $mobile->dimensions . "<br>";
+				if (!empty($mobile->_4g_bands)) 	echo "4g : " .$mobile->_4g_bands . "<br>";
+			}
+
+		} catch (Exception $e) {
+			echo "ERROR : " . $e->getMessage();
+		}
+
+?>
 ```
 
-###### Data Object Description
+###### Result Array Description
 
 **Note** : Use a "_" before key if the key is starting with a number (example : _2g_bands, _4g_bands)
 
@@ -46,7 +54,7 @@ function myCallback(queryString, data) {
 - card_slot
 - phonebook
 - call_records
-- camera_c (camera availability)
+- camera_c (camera availablity)
 - alert_types
 - loudspeaker_
 - 3_5mm_jack_
